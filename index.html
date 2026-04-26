@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureCheck — Verificação de Identidade</title>
+  <meta name="description" content="Confirme sua identidade de forma rápida e segura para acessar o conteúdo solicitado." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div>
+            <p class="brand-name">SecureCheck</p>
+            <p class="brand-sub">Verificação de identidade</p>
+          </div>
+        </div>
+        <div class="secure-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Conexão segura
+        </div>
+      </div>
+    </header>
+
+    <section class="container content">
+      <div class="card">
+        <!-- INTRO -->
+        <div id="step-intro" class="step active">
+          <div class="center">
+            <div class="big-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h1>Confirme sua identidade</h1>
+            <p class="lead">Para continuar e acessar o conteúdo solicitado, precisamos confirmar que você é uma pessoa real e maior de 18 anos.</p>
+          </div>
+
+          <ul class="benefits">
+            <li><span class="check">✓</span> Verificação rápida e segura</li>
+            <li><span class="check">✓</span> Nenhum dado pessoal é coletado</li>
+            <li><span class="check">✓</span> Acesso liberado em poucos segundos</li>
+          </ul>
+
+          <label class="agree">
+            <input type="checkbox" id="agree" />
+            <span>Confirmo que sou maior de 18 anos e concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>.</span>
+          </label>
+
+          <button id="start-btn" class="btn" disabled>Iniciar verificação</button>
+          <p class="footnote">🔒 Suas informações são protegidas por criptografia.</p>
+        </div>
+
+        <!-- VERIFYING -->
+        <div id="step-verifying" class="step">
+          <div class="center">
+            <div class="big-icon spin">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+            </div>
+            <h2>Verificando...</h2>
+            <p class="lead small">Aguarde enquanto confirmamos seus dados.</p>
+          </div>
+
+          <ul class="steps-list" id="steps-list">
+            <li data-i="0"><span class="dot"></span> Verificando dispositivo</li>
+            <li data-i="1"><span class="dot"></span> Validando informações</li>
+            <li data-i="2"><span class="dot"></span> Confirmando identidade</li>
+          </ul>
+
+          <div class="progress"><div id="bar" class="bar"></div></div>
+          <p class="progress-text"><span id="progress-num">0</span>%</p>
+        </div>
+
+        <!-- DONE -->
+        <div id="step-done" class="step">
+          <div class="center">
+            <div class="big-icon success">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </div>
+            <h2>Identidade confirmada</h2>
+            <p class="lead">Tudo certo! Estamos te redirecionando para o conteúdo solicitado...</p>
+            <div class="big-icon spin small-spin" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="disclaimer">Esta página é parte de um processo de verificação de acesso. Não coletamos, armazenamos ou compartilhamos dados pessoais.</p>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> SecureCheck. Todos os direitos reservados.</p>
+        <div class="footer-links">
+          <a href="#">Termos</a>
+          <a href="#">Privacidade</a>
+          <a href="#">Contato</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
